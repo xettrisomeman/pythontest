@@ -14,6 +14,12 @@ class MyTestPerson(unittest.TestCase):
         new_person = self.person.name("John" , "Smith")
         self.assertEqual(new_person, "JohnSmith")
 
+    @unittest.expectedFailure #it helps to ignore failing test
+    def test_new_person(self):
+        new_person = self.person.name("John" , "Cena")
+        self.assertEqual(new_person , "John Cena")
+
+
     def tearDown(self):
         del self.person
 
