@@ -30,3 +30,11 @@ def test_multiply():
     assert result == 6
 
 
+@pytest.mark.divide
+def test_divide():
+
+    calculator = Calculator()
+
+    result = calculator.divide(10,2)
+
+    assert result == 5
