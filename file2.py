@@ -1,11 +1,17 @@
 
-
+class CalculatorError(BaseException):
+    """An exception class for calculator"""
+    
 
 class Calculator:
     """A terrible calculator"""
 
     def add(self,a,b):
-        return a+b
+        try:
+            return a+b
+        except TypeError:
+            raise CalculatorError()
+
 
     def subtract(self,a,b):
         return a-b
@@ -15,3 +21,6 @@ class Calculator:
 
     def divide(self,a,b):
         return a/b
+
+
+
