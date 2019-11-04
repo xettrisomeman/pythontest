@@ -1,7 +1,7 @@
 from file2 import Calculator
 import pytest
 
-@pytest.mark.add
+@pytest.mark.add #now we can call this function only by running (pytest -m add)
 def test_add():
 
     calculator = Calculator()
@@ -10,7 +10,7 @@ def test_add():
 
     assert result == 5
 
-
+@pytest.mark.subtract
 def test_subtract():
 
     calculator = Calculator()
@@ -19,7 +19,14 @@ def test_subtract():
 
     assert result == 6
 
+ 
+@pytest.mark.multiply
+def test_multiply():
 
+    calculator = Calculator()
 
+    result = calculator.multiply(2,3)
+
+    assert result == 6
 
 
