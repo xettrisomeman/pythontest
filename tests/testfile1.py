@@ -28,6 +28,7 @@ class MyAddTestCase(unittest.TestCase):
         value = self.person.add()
         self.assertGreater(value , 3) #it will pass because 3+2 is greater than 3
 
+    @unittest.skip('always skipped') #it wont run , it will be skipped
     def test_substract(self):
         value = self.person.substract()
         self.assertFalse(value, 1) #it will fail because 3-2 is 1

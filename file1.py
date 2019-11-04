@@ -5,6 +5,7 @@ class Add:
         self.number1 = value1
         self.number2 = value2
 
+    
     def add(self):
         return self.number1 + self.number2
 
