@@ -1,17 +1,18 @@
-import file2
 
+from file2 import Calculator
 
 
 def test_add():
-    assert file2.add(7,3) == 10
-    assert file2.add(7) == 9
-    assert file2.add(5) == 7
+
+    calculator = Calculator()
+
+    result = calculator.add(2,3)
+
+    assert result == 5
 
 
-def test_product():
-    assert file2.product(5,5) == 25
-    assert file2.product(5) == 10
-    
+
+
 
 
 
