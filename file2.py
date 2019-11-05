@@ -1,7 +1,7 @@
 
 class CalculatorError(BaseException):
     """An exception class for calculator"""
-    
+
 
 class Calculator:
     """A terrible calculator"""
@@ -10,6 +10,8 @@ class Calculator:
         try:
             return a+b
         except TypeError:
+            raise CalculatorError()
+        except ValueError:
             raise CalculatorError()
 
 
